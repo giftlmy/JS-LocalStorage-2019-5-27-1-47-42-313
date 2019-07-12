@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="UTF-8">
+      <title>localStorag示例</title>
+  </head>
+  <body>
+  
+  <input type="text" id="result">
+  
+  <input type="button" value="加1" onclick="test()" >
+  
+  <script>
+      var txt =document.getElementsByTagName("input")[0];
+	  var storage=window.localStorage;
+         //写入a字段
+      storage.setItem("a","0");
+      txt.value=storage.a;	  
+      console.log(typeof storage["a"]);
+	  function test(){
+	     storage.a++;
+		  txt.value=storage.a;
+	  }
+
+  </script>
+  </body>
+  </html>
